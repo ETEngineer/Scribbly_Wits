@@ -1,0 +1,18 @@
+{% extends "base_nav.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+    <div class="container">
+        {% for blog in blogs %}
+        <br />
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ blog.title }}</h5>
+              <p class="card-text">{{ blog.content }}</p>
+              <a href="#" class="font-weight-light font-italic">{{ blog.date }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
